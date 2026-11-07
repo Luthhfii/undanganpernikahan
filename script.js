@@ -4,7 +4,7 @@ const params = new URLSearchParams(window.location.search);
 const guest = params.get("to");
 
 if (guest && guest.trim()) {
-  document.getElementById("guest-name").textContent = guest.trim();
+  document.getElementById("guestName").textContent = guest.trim();
 }
 
 // Untuk tahap pertama, tombol menampilkan pemberitahuan.
