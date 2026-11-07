@@ -41,7 +41,7 @@ body {
   position: relative;
   z-index: 1;
   width: min(100%, 440px);
-  min-height: 620px;
+  min-height: 600px;
   padding: 54px 28px 38px;
   display: flex;
   flex-direction: column;
@@ -738,4 +738,71 @@ h2 {
     font-weight: normal;
     color: #668e9c;
     margin: 10px 0;
+}
+
+/* PERBAIKAN TAMPILAN HALAMAN PEMBUKA */
+
+.cover {
+  min-height: 100vh;
+  padding: 24px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.invitation-card {
+  width: min(100%, 440px);
+  min-height: 560px;
+  padding: 45px 22px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* Nama tamu */
+#guestName {
+  margin: 8px 0 0;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(38px, 9vw, 58px);
+  font-weight: 400;
+  color: #638ba3;
+}
+
+/* Tanggal */
+.date-label {
+  margin: 24px 0 5px;
+}
+
+/* Tombol buka undangan */
+.open-button {
+  margin-top: 24px;
+}
+
+/* Tampilan HP */
+@media (max-width: 480px) {
+  .cover {
+    padding: 18px 14px;
+  }
+
+  .invitation-card {
+    min-height: 560px;
+    padding: 40px 20px 28px;
+  }
+
+  #guestName {
+    font-size: 48px;
+  }
+
+  .date-label {
+    margin-top: 24px;
+  }
+
+  .open-button {
+    margin-top: 24px;
+  }
 }
