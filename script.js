@@ -79,7 +79,7 @@ function continueWeddingMusic() {
 /* COUNTDOWN PERNIKAHAN */
 
 // GANTI tanggal dan waktu sesuai hari pernikahan
-const weddingDate = new Date("2027-06-20T08:00:00").getTime();
+const weddingDate = new Date("2026-12-04T08:00:00").getTime();
 
 function updateCountdown() {
 
