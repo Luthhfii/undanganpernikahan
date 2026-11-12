@@ -41,7 +41,7 @@ body {
   position: relative;
   z-index: 1;
   width: min(100%, 440px);
-  min-height: 600px;
+  min-height: 620px;
   padding: 54px 28px 38px;
   display: flex;
   flex-direction: column;
@@ -171,7 +171,7 @@ h1 span {
 
 /* Dekorasi sederhana di luar kartu */
 .ornament {
-  position: absolute;
+  position: center;
   color: rgba(255, 253, 249, .8);
   font-size: 120px;
   line-height: 1;
@@ -689,7 +689,7 @@ h2 {
     color: #779eaa;
 
     font-size: 22px;
-    cursor: pointer;
+    cursor: default;
 
     box-shadow: 0 5px 18px rgba(90, 130, 145, 0.15);
 
@@ -740,69 +740,14 @@ h2 {
     margin: 10px 0;
 }
 
-/* PERBAIKAN TAMPILAN HALAMAN PEMBUKA */
-
-.cover {
-  min-height: 100vh;
-  padding: 24px 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* FOTO GALERI TIDAK BISA DIKLIK */
+.gallery-page img {
+    cursor: default !important;
+    pointer-events: none;
 }
 
-.invitation-card {
-  width: min(100%, 440px);
-  min-height: 560px;
-  padding: 45px 22px 30px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-}
-
-/* Nama tamu */
-#guestName {
-  margin: 8px 0 0;
-  font-family: "Great Vibes", cursive;
-  font-size: clamp(38px, 9vw, 58px);
-  font-weight: 400;
-  color: #638ba3;
-}
-
-/* Tanggal */
-.date-label {
-  margin: 24px 0 5px;
-}
-
-/* Tombol buka undangan */
-.open-button {
-  margin-top: 24px;
-}
-
-/* Tampilan HP */
-@media (max-width: 480px) {
-  .cover {
-    padding: 18px 14px;
-  }
-
-  .invitation-card {
-    min-height: 560px;
-    padding: 40px 20px 28px;
-  }
-
-  #guestName {
-    font-size: 48px;
-  }
-
-  .date-label {
-    margin-top: 24px;
-  }
-
-  .open-button {
-    margin-top: 24px;
-  }
+/* HILANGKAN EFEK FOTO MEMBESAR */
+.gallery-page img:hover {
+    transform: none !important;
+    box-shadow: 0 8px 25px rgba(90, 130, 145, 0.12) !important;
 }
