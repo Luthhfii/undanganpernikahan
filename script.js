@@ -1,18 +1,17 @@
+// Ambil nama tamu dari alamat halaman, contoh:
+// index.html?to=Keluarga%20Bapak%20Andi
+const params = new URLSearchParams(window.location.search);
+const guest = params.get("to");
 
-/* =========================
-   NAMA TAMU UNDANGAN
-========================= */
-
-const urlParams = new URLSearchParams(window.location.search);
-
-const guestName = urlParams.get("to");
-
-const guestElement = document.getElementById("guestName");
-
-if (guestElement && guestName && guestName.trim()) {
-    guestElement.textContent = guestName.trim();
+if (guest && guest.trim()) {
+  document.getElementById("guest-name").textContent = guest.trim();
 }
 
+// Untuk tahap pertama, tombol menampilkan pemberitahuan.
+// Nanti tombol ini akan diarahkan ke halaman isi undangan yang kita buat berikutnya.
+document.getElementById("open-invitation").addEventListener("click", function () {
+  window.location.href = "halaman-kedua.html";
+});
 
 function openInvitation() {
 
@@ -80,7 +79,7 @@ function continueWeddingMusic() {
 /* COUNTDOWN PERNIKAHAN */
 
 // GANTI tanggal dan waktu sesuai hari pernikahan
-const weddingDate = new Date("2026-12-04T08:00:00").getTime();
+const weddingDate = new Date("2027-06-20T08:00:00").getTime();
 
 function updateCountdown() {
 
@@ -139,4 +138,28 @@ updateCountdown();
 
 setInterval(updateCountdown, 1000);
 
+/* NAMA TAMU UNDANGAN */
 
+const urlParams = new URLSearchParams(window.location.search);
+
+const guestName = urlParams.get("to");
+
+const guestElement = document.getElementById("guestName");
+
+if (guestElement && guestName) {
+
+    guestElement.textContent = guestName;
+
+}
+
+const music = document.getElementById("weddingMusic");
+
+music.addEventListener("loadedmetadata", function () {
+    music.currentTime = 22;
+});
+
+music.addEventListener("timeupdate", function () {
+    if (music.currentTime >= 309) {
+        music.currentTime = 22;
+    }
+});
